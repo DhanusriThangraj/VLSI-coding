@@ -26,3 +26,29 @@ module and_gate(
 
 endmodule
 
+
+
+// Testbench
+module and_gate_tb;
+  reg a, b;
+  wire y;
+  and_gate uut (
+    .a(a),
+    .b(b),
+    .y(y)
+  );
+ initial begin
+    $display("Time\t a b | y");
+    $display("-----------------");
+    a = 0; b = 0;
+    #10 $display("%g\t %b %b | %b", $time, a, b, y);
+    a = 0; b = 1;
+    #10 $display("%g\t %b %b | %b", $time, a, b, y);
+    a = 1; b = 0;
+    #10 $display("%g\t %b %b | %b", $time, a, b, y);
+    a = 1; b = 1;
+    #10 $display("%g\t %b %b | %b", $time, a, b, y);
+    $finish;
+  end
+endmodule
+
