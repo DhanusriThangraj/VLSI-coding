@@ -12,7 +12,7 @@ module ALU(
   wire[3:0]or_out;
   wire[3:0]add_out;
   wire[3:0]sub_out;
-  wire and_cout,sub_cout;
+  wire add_cout,sub_cout;
   wire add_ovf,sub_ovf;
   
   assign and_out= a&b;
