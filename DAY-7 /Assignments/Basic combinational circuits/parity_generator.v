@@ -4,7 +4,7 @@ module parity_generator(
 output reg even_parity,
 output reg odd_parity);
   assign even_parity= ~(^din);
-  assign odd_parity=~din;
+  assign odd_parity=^din;
 endmodule
 
 // testbench
