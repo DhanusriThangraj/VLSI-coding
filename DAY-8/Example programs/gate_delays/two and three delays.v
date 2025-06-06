@@ -1,7 +1,7 @@
 // design code
 module gate_delays (input 	a, b,
             	output out1, out2 ,out3);	
-  and 	   	#(3,5) o1 (out1, a, b);
+  and 	#(3,5) o1 (out1, a, b);
   bufif0   	#(5,7) b1 (out2, a, b);
   or        #(7,9) a1 (out3, a, b);
 endmodule
