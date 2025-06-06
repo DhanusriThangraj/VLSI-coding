@@ -1,7 +1,9 @@
+
+
 // design code
 module gate_delays (input 	a, b,
             	output out1, out2 ,out3);
-  and 	  	#(3:5:7,1:2:4)o1 (out1, a, b);
+  and 	  #(3:5:7,1:2:4)o1 (out1, a, b);
   bufif0 	  #(1:2:5,2:4:5) b1 (out2, a, b);
   or        #(1:3:7,3:5:9) a1 (out3, a, b);
   endmodule
@@ -51,3 +53,10 @@ endmodule
 
 // out3 (OR gate)
 // Delay: rise = 5, fall = 5
+
+//  #(3:5:7,1:2:4)
+// 3=min(high)     1=min(high)
+// 5=typ(normal)   2=typ(normal)
+// 7=max(low)      4=max(low)
+//  5 for rising and 2 for falling
+
