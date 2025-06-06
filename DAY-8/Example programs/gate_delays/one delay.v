@@ -4,11 +4,10 @@ module gate_delays (input a, b,
 
 	
   and       #(7) o1 (out1, a, b);
-  bufif0 	#(3) b1 (out2, a, b);
+  bufif0    #(3) b1 (out2, a, b);
   or        #(5) a1 (out3, a, b);
 
 endmodule
-
 
 // testbench
 module gate_delays_tb;
