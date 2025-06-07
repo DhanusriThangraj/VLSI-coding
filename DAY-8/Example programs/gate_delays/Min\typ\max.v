@@ -2,11 +2,11 @@
 
 // design code
 module gate_delays (input 	a, b,
-            	output out1, out2 ,out3);
-  and 	  #(3:5:7,1:2:4)o1 (out1, a, b);
-  bufif0 	  #(1:2:5,2:4:5) b1 (out2, a, b);
+                    output out1, out2 ,out3);
+  and 	#(3:5:7,1:2:4)o1 (out1, a, b);
+  bufif0 	#(1:2:5,2:4:5) b1 (out2, a, b);
   or        #(1:3:7,3:5:9) a1 (out3, a, b);
-  endmodule
+endmodule
 // testbench
 module gate_delays_tb;
   reg a, b;
@@ -47,12 +47,12 @@ endmodule
 
 
 // out2 (bufif0 gate)
-// Delay: rise = 3, fall = 4
+// Delay: rise = 2, fall = 4
 // bufif0 enables driving output when b=0
 // Output is high impedance (z) when b=1
 
 // out3 (OR gate)
-// Delay: rise = 5, fall = 5
+// Delay: rise = 3, fall = 5
 
 //  #(3:5:7,1:2:4)
 // 3=min(high)     1=min(high)
