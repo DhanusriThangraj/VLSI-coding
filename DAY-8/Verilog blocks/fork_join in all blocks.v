@@ -7,8 +7,7 @@ module blocking;
     $monitor("%0t\t%h\t%h\t%h\t%h\t%h\t",$time,a, b, c, d, e);   
     a = 8'hDA;
     #10 b = 8'hF1;
-    #12 c = 8'h30;
-    
+    #12 c = 8'h30; 
     #10 b = a;
     #12 a = b;
       join
