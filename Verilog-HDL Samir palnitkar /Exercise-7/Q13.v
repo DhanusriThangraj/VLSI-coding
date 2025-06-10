@@ -12,7 +12,8 @@
      clock=0;
     while ($time<100) 
    begin
-    #5 clock=~clock;    
+    #5 clock=~clock;  
+     // Half of the time period (10/2 = 5)
   end    
     #10 $finish;
   end
