@@ -1,41 +1,6 @@
-module mealy_tb;
- reg  clk;
- reg reset;
- reg in;
- wire out;
- mealy uut (clk,reset,in,out);
-initial begin
-clk=0;
-forever #5 clk=~clk;
-end
-
-initial begin
-$display("Time\tclk\treset\tin\tout");
-$monitor("%0t\t%b\t%b\t%b\t%b",$time,clk,reset,in,out);
-
-reset=1;
-
-#10; 
-reset=0;#10;
-in=1;#10;
-in=0;#10;
-in=1;#10;
-in=1;#10;
-
-in=0;#10;
-in=1;#10;
-in=0;#10;
-in=1;#10;
-in=1;#10;
-in=1;#10;
-
-$finish;
-
-end
-endmodule
 
 
-// testbench
+// design code
 module mealy(clk,reset,in,out);
 input wire clk;
 input wire reset;
@@ -86,4 +51,41 @@ always @ (posedge clk or posedge reset) begin
           state<=next_state;
   end 
   endmodule
+
+// testbench
+module mealy_tb;
+ reg  clk;
+ reg reset;
+ reg in;
+ wire out;
+ mealy uut (clk,reset,in,out);
+initial begin
+clk=0;
+forever #5 clk=~clk;
+end
+
+initial begin
+$display("Time\tclk\treset\tin\tout");
+$monitor("%0t\t%b\t%b\t%b\t%b",$time,clk,reset,in,out);
+
+reset=1;
+
+#10; 
+reset=0;#10;
+in=1;#10;
+in=0;#10;
+in=1;#10;
+in=1;#10;
+
+in=0;#10;
+in=1;#10;
+in=0;#10;
+in=1;#10;
+in=1;#10;
+in=1;#10;
+
+$finish;
+
+end
+endmodule
 
