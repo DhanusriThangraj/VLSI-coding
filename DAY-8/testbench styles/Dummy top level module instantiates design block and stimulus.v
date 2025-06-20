@@ -11,7 +11,6 @@ module ripple_carry_counter(input clk,
       q<=q+1; 
   end
 endmodule
-
 //testbench
 module ripple_carry_counter_tb(
   output reg d_clk,
