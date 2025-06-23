@@ -16,10 +16,14 @@ module top_module (
                 begin
                     prev_state=state;
         case(s)
-            3'b000:begin fr3 =1'b1;fr2 =1'b1;fr1=1'b1;state=A; dfr = (prev_state>state)?1'b1:((prev_state==state)?dfr:1'b0); end
-            3'b001:begin fr3 =1'b0;fr2 =1'b1;fr1=1'b1; state=B; dfr = (prev_state>state)?1'b1:((prev_state==state)?dfr:1'b0); end
-            3'b011:begin fr3 =1'b0;fr2 =1'b0;fr1=1'b1; state=C; dfr = (prev_state>state)?1'b1:((prev_state==state)?dfr:1'b0); end
-            3'b111:begin fr3 =1'b0;fr2 =1'b0;fr1=1'b0; state=D; dfr = (prev_state>state)?1'b1:((prev_state==state)?dfr:1'b0);end
+            3'b000:begin fr3 =1'b1;fr2 =1'b1;fr1=1'b1;state=A; 
+                dfr = (prev_state>state)?1'b1:((prev_state==state)?dfr:1'b0); end
+            3'b001:begin fr3 =1'b0;fr2 =1'b1;fr1=1'b1; state=B; 
+                dfr = (prev_state>state)?1'b1:((prev_state==state)?dfr:1'b0); end
+            3'b011:begin fr3 =1'b0;fr2 =1'b0;fr1=1'b1; state=C;
+                dfr = (prev_state>state)?1'b1:((prev_state==state)?dfr:1'b0); end
+            3'b111:begin fr3 =1'b0;fr2 =1'b0;fr1=1'b0; state=D; 
+                dfr = (prev_state>state)?1'b1:((prev_state==state)?dfr:1'b0);end
             default:begin fr3 =1'b1;fr2 =1'b1;fr1 =1'b1;dfr =1'b1; state=A;end
         endcase
         end
