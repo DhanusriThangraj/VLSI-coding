@@ -1,4 +1,5 @@
 Using the repeat loop, delay the statement a = a + 1 by 20 positive edges of clock. 
+  
   // design code
   module repeat_on_posedge;
   reg clock;
