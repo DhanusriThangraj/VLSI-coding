@@ -1,6 +1,7 @@
 // Using the wait statement, design a level-sensitive latch that takes clock and d as inputs and q as output.
 // q = d whenever clock = 1. 
 
+
 // design code
 module D_FF(clock,d,q);
   input clock,d;
