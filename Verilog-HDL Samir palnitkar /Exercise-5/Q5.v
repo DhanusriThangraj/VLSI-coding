@@ -5,6 +5,7 @@ bufif1 #(1:3:5,2:4:6,3:5:7)(out,in1,s);
 bufif0 #(1:3:5,2:4:6,3:5:7)(out,in2,s);
 endmodule
 
+
 // testbench
 module mux_2to1_tb;
 reg in1,in2,s;
