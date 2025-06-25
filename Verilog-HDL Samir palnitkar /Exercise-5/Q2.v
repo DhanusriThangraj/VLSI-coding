@@ -10,7 +10,7 @@ wire w1,w2,w3;
 //my_or
 nand a1 (w1,a,a);
 nand b1 (w2,b,b);
-nand c (c1,w1,w2);
+nand c  (c1,w1,w2);
 //my_and
 nand (w3,a,b);
 nand (c2,w3,w3);
