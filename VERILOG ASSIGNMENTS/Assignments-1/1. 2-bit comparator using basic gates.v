@@ -8,7 +8,6 @@ module comparator_2bit (
     output wire gt,      
     output wire lt       
 );
-
     wire notA1, notA0, notB1, notB0;
     wire A1_eq_B1, A0_eq_B0;
     wire A_gt_B, A_lt_B;
