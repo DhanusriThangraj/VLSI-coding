@@ -37,7 +37,7 @@ begin
 #30 b = x ;
 end 
 #5 m = y ;
-       join 
+     join 
 end 
 endmodule
 
