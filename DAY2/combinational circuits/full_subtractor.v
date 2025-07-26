@@ -5,10 +5,8 @@ module full_sub (
     output  diff,  
     output wire borrow 
 );
-
     assign diff = a ^ b ^ c;
     assign borrow = (~a & b) | (~a & c) | (b & c);
-
 endmodule
 
 // testbench
