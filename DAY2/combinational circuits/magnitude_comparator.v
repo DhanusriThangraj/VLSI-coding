@@ -1,3 +1,4 @@
+
 module magnitude_comparator( input wire [3:0]a, input wire [3:0]b,
 output reg a_greater,output reg a_equal,output reg a_lesser );
   assign a_greater = a>b;
