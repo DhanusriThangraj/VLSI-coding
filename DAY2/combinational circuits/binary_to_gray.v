@@ -5,6 +5,7 @@ assign gray[1] = binary[2]^binary[1];
 assign gray[0] = binary[1]^binary[0];
 endmodule
 
+
 // testbench
 module binary_to_gray_tb;
 reg [3:0]binary;
