@@ -8,7 +8,6 @@ module parity_generator (input  [3:0]data,
 endmodule
 
 // testbench
-
 module parity_generator_tb;
     reg  [3:0] data;
     wire even_parity, odd_parity;
