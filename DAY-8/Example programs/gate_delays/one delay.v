@@ -29,3 +29,25 @@ initial begin
     #10; $finish;
   end
 endmodule
+
+//output
+  5-09-13 09:21:25 UTC] iverilog '-Wall' '-g2012' design.sv testbench.sv  && unbuffer vvp a.out  
+Time	a	b	out1	out2	out3
+
+0	    0	0	x	x	x
+3	    0	0	x	0	x
+5	    0	0	x	0	0
+7	    0	0	0	0	0
+10	    1	0	0	0	0
+13	    1	0	0	1	0
+15	    1	0	0	1	1
+20	    1	1	0	1	1
+23	    1	1	0	z	1
+27   	1	1	1	z	1
+30	    0	1	1	z	1
+37	    0	1	0	z	1
+40	    0	0	0	z	1
+43	    0	0	0	0	1
+45	    0	0	0	0	0
+testbench.sv:22: $finish called at 50 (1s)
+Done
