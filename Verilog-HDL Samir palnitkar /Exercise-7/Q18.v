@@ -2,27 +2,32 @@
 //   The counter starts counting at count = 5 and finishes at count = 67. The count is incremented at positive edge of clock.
 //   The clock has a time period of 10. The counter counts through the loop only once and then is disabled. (Hint: Use the disable statement).
 
-module disable_block;
-  reg clock;
-  reg [7:0]count;
+module counter;
+  reg clk;
+  reg[7:0]count;
+  
   initial begin
-    $display("time\tclock\tcount\t");
-    $monitor("%0t\t%b\t%d\t",$time,clock,count);
+    clk=0;
+    forever #5 clk=~clk;
   end
+  
   initial begin
-    clock=0;
-    forever #5 clock=~clock;
+    $display("Time\tclk\tcount");
+    $monitor("%0t\t\t%0b\t%0d\t",$time,clk,count);
+    #700; $finish;
   end
+  
   initial begin
     count=5;
-    begin:counted_loop
+    begin:counter_loop
       forever begin
-        @(posedge clock)
-        count=count+1; 
+        @(posedge clk)
+        count=count+1;
+        
+          if(count==67)begin
+        disable counter_loop;
       end
-      if (count<67) begin
-        disable counted_loop;
-        end
+      end  
+    end        
   end
-  end
-        endmodule
+endmodule
