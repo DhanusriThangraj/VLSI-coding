@@ -1,4 +1,3 @@
-
 module down_counter (clk,reset,count);
 input clk;
 input reset;
@@ -13,6 +12,7 @@ else begin
 end
 end
 endmodule
+
 
 // testbench
 module down_counter_tb;
