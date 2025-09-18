@@ -38,3 +38,4 @@ module d_latch_tb;
    $finish;
   end 
 endmodule
+
