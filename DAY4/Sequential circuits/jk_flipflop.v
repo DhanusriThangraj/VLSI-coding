@@ -15,6 +15,7 @@ module jk_flipflop (clk,j,k,q,qbar);
         end 
 endmodule
 
+
 // testbench
 module jk_flipflop_tb;
   reg clk,j,k;
