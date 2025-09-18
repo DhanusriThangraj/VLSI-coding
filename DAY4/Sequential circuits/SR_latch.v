@@ -22,6 +22,7 @@ module sr_latch(q,qbar,s,r);
 endmodule
 
 
+
 // gate level
 module sr_latch(
   input s,r,
