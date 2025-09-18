@@ -9,6 +9,7 @@
     nand(qbar,r,q);
   endmodule     
 
+
 // data flow
 module jk_latch (
   input j,k,en,
