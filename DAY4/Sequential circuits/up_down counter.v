@@ -14,8 +14,7 @@ module up_down_counter(clk,reset,up_down,count);
        count <=count-1;
     end     
   end
- 
-endmodule
+ endmodule
 
 // testbench
 module up_down_counter_tb;
