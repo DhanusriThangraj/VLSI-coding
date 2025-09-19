@@ -12,6 +12,8 @@ module up_counter(clk,en,reset,count);
   end
 endmodule
 
+
+
 // testbench
 module up_counter_tb;
   reg en,reset,clk;
