@@ -19,7 +19,6 @@ end
 endmodule
 
 // testbench
-
 `timescale 1ns / 1ps
 
 module t_latch_tb;
