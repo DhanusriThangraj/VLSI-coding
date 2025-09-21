@@ -1,5 +1,4 @@
 
-
 // design code
 module mealy(clk,reset,in,out);
 input wire clk;
