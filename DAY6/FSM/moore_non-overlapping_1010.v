@@ -1,3 +1,4 @@
+
 module moore(clk,reset,in,out);
 input wire clk;
 input wire reset;
