@@ -1,3 +1,4 @@
+
 module mealy(clk,reset,in,out);
 input wire clk;
 input wire reset;
