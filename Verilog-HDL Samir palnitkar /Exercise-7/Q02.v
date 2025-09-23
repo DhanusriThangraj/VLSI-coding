@@ -15,8 +15,12 @@ module clock;
   initial begin
     $display("Time\tclock\t");
     $monitor("%0t\t%b",$time,clock);
-    #100 $finish;
+    #1000 $finish;
   end
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars();
+  end 
   initial begin
     clock=0;end
   always begin
